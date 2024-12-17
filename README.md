@@ -131,7 +131,7 @@ This will start the server, and you can access the application in your browser b
         ],
         "created_at": "2024-12-17T14:29:05.803931Z",
         "updated_at": "2024-12-17T14:29:12.053820Z"
-    }
+       }
    }
     ```
 
@@ -149,6 +149,22 @@ This will start the server, and you can access the application in your browser b
         "hint": "The capital of France is known for the Eiffel Tower." 
     }
     ```
+
+### 5. Generate Question for a Student
+- **Endpoint**: `POST /api/generate-question/`
+- **Request Body**:
+    ```json
+    { 
+        "text": "create question for standard-5 student mathematics."
+    }
+    ```
+- **Response**:
+    ```json
+    { 
+        "generated_question": {
+            "question_text": "Here are some math questions suitable for a standard 5 (around 10-11 year old) student, categorized by topic:\n\n**Numbers and Operations:**\n\n1. **Addition and Subtraction:** A farmer has 345 apple trees and 287 pear trees. How many trees does the farmer have in total?  If he sells 150 apple trees, how many apple trees are left?\n\n2. **Multiplication and Division:**  A box contains 24 pencils.  If there are 15 boxes, how many pencils are there in total? If these pencils are divided equally among 6 students, how many pencils does each student get?\n\n3. **Fractions:**  What is 2/3 of 27?  Add 1/4 and 3/8.  Subtract 5/6 from 1.\n\n4. **Decimals:**  Add 3.45 and 2.7. Subtract 1.8 from 5.23. Multiply 2.5 by 4.\n\n5. **Order of Operations (BODMAS/PEMDAS):** Solve: 12 + 6 ÷ 2 × 3 - 4\n\n\n**Geometry and Measurement:**\n\n6. **Perimeter:** A rectangle has a length of 12cm and a width of 5cm. What is its perimeter?\n\n7. **Area:** A square has sides of 8cm. What is its area?\n\n8. **Volume:** A rectangular prism has a length of 10cm, a width of 5cm, and a height of 3cm. What is its volume?\n\n9. **Angles:** What type of angle is an angle measuring 110 degrees? (acute, obtuse, right, reflex)\n\n10. **Time:** A movie starts at 7:15 pm and lasts for 2 hours and 30 minutes. What time does the movie end?\n\n\n**Problem Solving:**\n\n11.  Sarah has 3 times as many marbles as Tom. If Tom has 15 marbles, how many marbles does Sarah have?\n\n12. A bus has 40 seats. If 27 people are already on the bus, how many more people can get on?\n\n13.  A pizza is cut into 8 slices. If you eat 3 slices, what fraction of the pizza have you eaten?\n\n\n**Remember to adjust the difficulty based on the specific curriculum and the students' abilities.**  These are examples, and you can modify numbers and contexts to create more questions. You can also add word problems that require multiple steps to solve."
+        }
+    }
 
 # Testing the APIs in Postman
 
