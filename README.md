@@ -51,6 +51,15 @@ python manage.py createsuperuser
 
 Follow the prompts to create the admin account.
 
+### 6. Run the Development Server
+To start the Django development server and run the application locally:
+
+```bash
+python manage.py runserver
+```
+
+This will start the server, and you can access the application in your browser by navigating to `http://127.0.0.1:8000/`. If you created a superuser, you can log into the Django Admin at `http://127.0.0.1:8000/admin/`.
+
 # API Endpoints
 
 ### 1. User Registration (Sign Up)
