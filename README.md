@@ -97,25 +97,42 @@ This will start the server, and you can access the application in your browser b
     ```
 
 ### 3. Create a Quiz (Admin/Authenticated User)
-- **Endpoint**: `POST /api/create_quiz/`
+- **Endpoint**: `POST /api/create-quiz/`
 - **Request Body**:
     ```json
     { 
         "subject": "General Knowledge", 
-        "quiz_title": "Sample Quiz", 
-        "duration": 30 
     }
     ```
 - **Response**:
     ```json
-    { 
-        "message": "Quiz created successfully", 
-        "quiz": { 
-            "subject": "General Knowledge", 
-            "quiz_title": "Sample Quiz", 
-            "duration": 30 
-        } 
+    {
+    "message": "Quiz created successfully",
+    "quiz": {
+        "id": 24,
+        "subject": "General Knowledge",
+        "grade_level": null,
+        "question_data": [
+            {
+                "question_text": "What is the name of the largest moon of Saturn, known for its complex geological features, including cryovolcanism and a subsurface ocean?\n\nOption 1: Titan\nOption 2: Rhea\nOption 3: Iapetus\nOption 4: Enceladus\n\nCorrect Option: Option 1"
+            },
+            {
+                "question_text": "What year did the iconic board game \"Monopoly\" first launch in its current form, featuring the familiar properties and game pieces?\n\nOption 1: 1923\nOption 2: 1935\nOption 3: 1903\nOption 4: 1910\n\nCorrect Option: Option 2"
+            },
+            {
+                "question_text": "What is the name of the longest river in the world that entirely flows within a single country?\n\nOption 1:  Amazon River\nOption 2: Nile River\nOption 3: Yangtze River\nOption 4: Mississippi River\n\nCorrect Option: Option 3 (Yangtze River)"
+            },
+            {
+                "question_text": "What year did the first successful human-powered flight take place, officially recognized by the Fédération Aéronautique Internationale?\n\nOption 1: 1903\nOption 2: 1910\nOption 3: 1896\nOption 4: 1921\n\nCorrect Option: Option 1"
+            },
+            {
+                "question_text": "Which of these countries is landlocked and does not border the Caspian Sea?\n\nOption 1: Kazakhstan\nOption 2: Uzbekistan\nOption 3: Kyrgyzstan\nOption 4: Tajikistan\n\nCorrect Option: Option 3"
+            }
+        ],
+        "created_at": "2024-12-17T14:29:05.803931Z",
+        "updated_at": "2024-12-17T14:29:12.053820Z"
     }
+   }
     ```
 
 ### 4. Generate Hint for a Question
@@ -143,8 +160,9 @@ This will start the server, and you can access the application in your browser b
     - Add the request data in JSON format (refer to each endpoint for the expected data).
 3. **Authentication**:
     - For endpoints that require authentication (like Create Quiz, Submit Quiz), use the token obtained from the Login endpoint:
-        - In Postman, go to the "Authorization" tab.
-        - Select "Bearer Token" and paste the JWT access token.
+        - In Postman, go to the "Headers" tab.
+        - Add a new key: `Authorization`.
+        - Set the value to `Bearer <access_token>`, where `<access_token>` is the token obtained from the Login API.
 4. **Send the Request**:
     - Click on the "Send" button.
     - View the response from the API in the "Response" section.
