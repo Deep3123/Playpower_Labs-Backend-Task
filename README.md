@@ -53,7 +53,7 @@ Follow the prompts to create the admin account.
 
 # API Endpoints
 
-## 1. User Registration (Sign Up)
+### 1. User Registration (Sign Up)
 - **Endpoint**: `POST /api/register/`
 - **Request Body**:
     ```json
@@ -70,7 +70,7 @@ Follow the prompts to create the admin account.
     }
     ```
 
-## 2. User Login (JWT Token Generation)
+### 2. User Login (JWT Token Generation)
 - **Endpoint**: `POST /api/login/`
 - **Request Body**:
     ```json
@@ -87,7 +87,7 @@ Follow the prompts to create the admin account.
     }
     ```
 
-## 3. Create a Quiz (Admin/Authenticated User)
+### 3. Create a Quiz (Admin/Authenticated User)
 - **Endpoint**: `POST /api/create_quiz/`
 - **Request Body**:
     ```json
@@ -109,7 +109,7 @@ Follow the prompts to create the admin account.
     }
     ```
 
-## 4. Generate Hint for a Question
+### 4. Generate Hint for a Question
 - **Endpoint**: `POST /api/generate_hint/`
 - **Request Body**:
     ```json
